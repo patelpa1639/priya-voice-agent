@@ -1,595 +1,571 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Priya – AI Voice Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Warm Professional Tech -->
+    <!-- Primary Background: #f8fafc (Slate-50) -->
+    <!-- Cards/Panels: #ffffff (White) -->
+    <!-- Text Main: #1e293b (Slate-800) -->
+    <!-- Accent: #3b82f6 (Blue-500) and #0f172a (Slate-900) -->
+    
+    <!-- Application Structure Plan: 
+         1. Hero Section: Sets the executive context. Includes Medium Article links.
+         2. Strategic Motivation Grid: Interactive cards explaining the "Why".
+         3. Interactive System Architecture: A clickable flow diagram representing the pipeline.
+         4. Trade-off Analytics Dashboard: Chart.js visualizations for Latency and Scoping.
+         5. Guardrails Console: UI mocking system safety protocols.
+         6. Roadmap & Market Fit: Timeline for Health Tech and Hospitality use case.
+         7. Live Demo: Direct contact/testing.
+    -->
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        /* Chart container constraint */
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        
+        .node-active { border-color: #3b82f6; background-color: #eff6ff; box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1); }
+        .hidden-content { display: none; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Custom Scrollbar for side nav */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Case Study: Priya – AI Voice Agent&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chosen Palette: Warm Professional Tech --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Primary Background: #f8fafc (Slate-50) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Cards/Panels: #ffffff (White) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Text Main: #1e293b (Slate-800) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Accent: #3b82f6 (Blue-500) and #0f172a (Slate-900) --&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Application Structure Plan:<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">         </span>1. Hero Section: Sets the executive context. Includes new Medium Article links.</p>
-<p class="p1"><span class="Apple-converted-space">         </span>2. Strategic Motivation Grid: Interactive cards explaining the "Why".</p>
-<p class="p1"><span class="Apple-converted-space">         </span>3. Interactive System Architecture: A clickable flow diagram representing the pipeline.</p>
-<p class="p1"><span class="Apple-converted-space">         </span>4. Trade-off Analytics Dashboard: Chart.js visualizations for Latency and Scoping.</p>
-<p class="p1"><span class="Apple-converted-space">         </span>5. Guardrails Console: UI mocking system safety protocols.</p>
-<p class="p1"><span class="Apple-converted-space">         </span>6. Roadmap &amp; Reflection: Timeline and final thoughts.</p>
-<p class="p1"><span class="Apple-converted-space">         </span>7. Live Demo: New section for direct contact/testing.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Visualization &amp; Content Choices:</p>
-<p class="p1"><span class="Apple-converted-space">         </span>- Chart.js for Latency and Trade-offs.</p>
-<p class="p1"><span class="Apple-converted-space">         </span>- CSS Grid/Flexbox for Architecture Diagram (No SVG/Mermaid).</p>
-<p class="p1"><span class="Apple-converted-space">         </span>- Tailwind for responsive layout.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- CONFIRMATION: NO SVG graphics used (except text-based icons). NO Mermaid JS used. --&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Chart container constraint */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (min-width: 768px) { .chart-container { height: 350px; } }</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.node-active { border-color: #3b82f6; background-color: #eff6ff; box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hidden-content { display: none; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.fade-in { animation: fadeIn 0.5s ease-in; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Custom Scrollbar for side nav */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar { width: 6px; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-track { background: #f1f1f1; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="flex flex-col md:flex-row min-h-screen"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Navigation Sidebar --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="w-full md:w-72 bg-slate-900 text-white flex-shrink-0 md:h-screen md:sticky md:top-0 overflow-y-auto z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-2xl font-bold tracking-tight mb-1"&gt;Priya&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-slate-400 uppercase tracking-wider mb-8"&gt;AI Voice Agent Case Study&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-2 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('hero')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-blue-400"&gt;Overview&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('strategy')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300"&gt;Strategic Motivation&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('architecture')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300"&gt;System Architecture&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('tradeoffs')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300"&gt;Decisions &amp; Tradeoffs&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('safety')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300"&gt;Risk &amp; Guardrails&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('roadmap')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300"&gt;Roadmap &amp; Reflection&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="scrollToSection('demo')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-emerald-400 border border-slate-700 mt-4"&gt;Test Live Prototype&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pt-6 border-t border-slate-700 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xs text-slate-500 font-semibold mb-3"&gt;READ THE ARTICLES&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://medium.com/@pranav_patel06/building-priya-a-voice-powered-ai-assistant-for-calendar-email-and-call-management-ad3500179f4b" target="_blank" class="block mb-3 text-sm text-slate-300 hover:text-white hover:underline transition"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>📄 Building Priya: Architecture &amp; Tech Stack</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://medium.com/@pranav_patel06/two-weeks-with-my-own-voice-ai-agent-lessons-learned-and-whats-next-with-priyax-and-vmware-26816f8a4292" target="_blank" class="block text-sm text-slate-300 hover:text-white hover:underline transition"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>📄 Two Weeks In: Lessons Learned</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pt-6 border-t border-slate-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xs text-slate-500 font-semibold mb-2"&gt;CORE STACK&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-wrap gap-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300"&gt;Vapi&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300"&gt;OpenAI&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300"&gt;LangChain&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300"&gt;GCal API&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Main Content --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="flex-1 overflow-x-hidden"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Hero Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="hero" class="p-6 md:p-12 max-w-6xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold mb-4"&gt;Systems Prototype&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4"&gt;Designing Deterministic AI Agents for Voice Interface&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xl text-slate-600 leading-relaxed max-w-3xl mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Priya is a production-ready voice assistant that moves beyond simple retrieval. It bridges the gap between LLM reasoning and deterministic tool execution to autonomously manage inbound calls and schedule meetings.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Article Buttons --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col sm:flex-row gap-4 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="https://medium.com/@pranav_patel06/building-priya-a-voice-powered-ai-assistant-for-calendar-email-and-call-management-ad3500179f4b" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 shadow-sm text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Read Part 1: Building Priya&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="ml-2"&gt;↗&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="https://medium.com/@pranav_patel06/two-weeks-with-my-own-voice-ai-agent-lessons-learned-and-whats-next-with-priyax-and-vmware-26816f8a4292" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 shadow-sm text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Read Part 2: Lessons Learned&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="ml-2"&gt;↗&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-3xl mb-3"&gt;🗣️&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-slate-800 mb-2"&gt;Voice-First&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-600"&gt;Handles high-speed, interruptible conversation logic.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-3xl mb-3"&gt;⚡&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-slate-800 mb-2"&gt;Action-Oriented&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-600"&gt;Executes write-operations via Google Calendar API.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-3xl mb-3"&gt;🛡️&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-slate-800 mb-2"&gt;Deterministic&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-600"&gt;Structured function calling ensures reliability over creativity.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Strategic Motivation --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="strategy" class="bg-white border-y border-slate-200 p-6 md:p-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="max-w-6xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-2xl font-bold text-slate-900"&gt;Strategic Motivation&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600 mt-2"&gt;Why build this? The transition from chatbots to agents requires solving for three core product hypotheses regarding trust and usability.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Hypothesis 1 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="group cursor-pointer" onclick="highlightStrategy(0)"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="strat-card-0" class="border-l-4 border-blue-500 bg-slate-50 p-6 transition-all duration-300 hover:shadow-md"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-lg mb-2 text-slate-800"&gt;1. Voice-First UX&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-slate-600"&gt;Can an LLM handle the high-speed, interruptible nature of voice conversation without breaking immersion?&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Hypothesis 2 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="group cursor-pointer" onclick="highlightStrategy(1)"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="strat-card-1" class="border-l-4 border-slate-200 bg-white p-6 transition-all duration-300 hover:shadow-md"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-lg mb-2 text-slate-800"&gt;2. Tool Reliability&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-slate-600"&gt;How do we ensure an LLM triggers API calls only when specific, structured criteria are met?&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Hypothesis 3 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="group cursor-pointer" onclick="highlightStrategy(2)"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="strat-card-2" class="border-l-4 border-slate-200 bg-white p-6 transition-all duration-300 hover:shadow-md"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-lg mb-2 text-slate-800"&gt;3. Trust &amp; Safety&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-slate-600"&gt;What guardrails are necessary to give an AI "write access" to a user's personal calendar?&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- System Architecture --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="architecture" class="p-6 md:p-12 max-w-6xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-bold text-slate-900"&gt;System Architecture&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-600 mt-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>A modular design decoupling voice processing from reasoning logic.</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="font-medium text-blue-600"&gt;Click the nodes below to explore the technical flow.&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col lg:flex-row gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Interactive Diagram --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-full lg:w-1/2 flex flex-col items-center justify-center space-y-4 py-8 bg-slate-50 rounded-xl border border-slate-200 relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Connector Lines (CSS) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="absolute w-1 h-full bg-slate-200 z-0" style="left: 50%; transform: translateX(-50%); top:0;"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Nodes --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div onclick="showNodeDetails('vapi')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition node-active" id="node-vapi"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center justify-between"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-bold text-slate-700"&gt;1. Voice Gateway&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs bg-slate-100 px-2 py-1 rounded"&gt;Vapi&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative z-10 text-slate-400 text-2xl"&gt;⬇&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div onclick="showNodeDetails('langchain')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition" id="node-langchain"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center justify-between"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-bold text-slate-700"&gt;2. Orchestration&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs bg-slate-100 px-2 py-1 rounded"&gt;LangChain&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative z-10 text-slate-400 text-2xl"&gt;⬇&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div onclick="showNodeDetails('openai')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition" id="node-openai"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center justify-between"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-bold text-slate-700"&gt;3. Reasoning&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs bg-slate-100 px-2 py-1 rounded"&gt;GPT-4o&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative z-10 text-slate-400 text-2xl"&gt;⬇&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div onclick="showNodeDetails('tools')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition" id="node-tools"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center justify-between"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-bold text-slate-700"&gt;4. Tool Execution&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs bg-slate-100 px-2 py-1 rounded"&gt;GCal API&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Detail Panel --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-full lg:w-1/2 bg-white rounded-xl border border-slate-200 p-8 shadow-sm h-full min-h-[400px]"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="detail-vapi" class="fade-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-blue-600 mb-4"&gt;1. Voice Gateway (Vapi)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-700 mb-4"&gt;Handles the raw telephony, Speech-to-Text (STT), and Text-to-Speech (TTS). Critical for managing the "feel" of the conversation.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="space-y-2 text-sm text-slate-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Manages turn-taking logic.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Detects interruptions (barge-in).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Streams audio with minimal latency.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="detail-langchain" class="hidden-content fade-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-blue-600 mb-4"&gt;2. Orchestration Layer&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-700 mb-4"&gt;Acts as the nervous system, managing conversation state and routing transcripts between the voice layer and the reasoning brain.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="space-y-2 text-sm text-slate-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Maintains context history.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Formats prompts for the LLM.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Parses structured outputs (JSON).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="detail-openai" class="hidden-content fade-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-blue-600 mb-4"&gt;3. Reasoning Engine&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-700 mb-4"&gt;The core logic center utilizing OpenAI's GPT-4o. It doesn't just chat; it analyzes intent to determine if an action is required.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ul class="space-y-2 text-sm text-slate-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Uses &lt;strong&gt;Function Calling&lt;/strong&gt; to output JSON.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Extracts entities (Date, Time, Duration).&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li class="flex items-start"&gt;&lt;span class="mr-2 text-blue-500"&gt;✓&lt;/span&gt;Decides &lt;i&gt;when&lt;/i&gt; to stop talking and start doing.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="detail-tools" class="hidden-content fade-in"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-blue-600 mb-4"&gt;4. Tool Execution&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-700 mb-4"&gt;The hands of the system. Performs deterministic read/write operations on the Google Calendar API.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-slate-100 p-4 rounded text-sm font-mono text-slate-700 mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="font-bold text-xs text-slate-500 mb-2"&gt;FUNCTIONS:&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;GetAvailability(start, end)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;BookMeeting(email, time, duration)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600"&gt;&lt;strong&gt;Feedback Loop:&lt;/strong&gt; API success/failure is fed back to context so the voice agent can confirm verbally.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Decisions &amp; Tradeoffs --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="tradeoffs" class="bg-slate-50 border-y border-slate-200 p-6 md:p-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="max-w-6xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-2xl font-bold text-slate-900"&gt;Key Product Decisions&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600 mt-2"&gt;Systems design is about trade-offs. Here is how we balanced competing constraints.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-12"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Decision 1: Latency --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-xl shadow-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-bold text-slate-800 mb-2"&gt;1. Latency vs. Intelligence&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600 mb-6"&gt;Voice interfaces have a strict latency budget. We used a hybrid approach: fast models for phatic chat, smart models for reasoning.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;canvas id="latencyChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-center text-slate-400 mt-4"&gt;Average user patience threshold before abandonment.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Decision 2: Scoping --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-xl shadow-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-bold text-slate-800 mb-2"&gt;2. Strict Scoping vs. Open Chat&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600 mb-6"&gt;To ensure reliability, we traded "Personality" for "Structure". Priya politely rejects out-of-scope topics.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="chart-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;canvas id="radarChart"&gt;&lt;/canvas&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-center text-slate-400 mt-4"&gt;Product Profile: Priya vs. Generic Chatbot&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Risk &amp; Guardrails --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="safety" class="p-6 md:p-12 max-w-6xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-bold text-slate-900"&gt;Risk Mitigation &amp; Guardrails&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-600 mt-2"&gt;Giving an AI write-access to a database creates integrity risks. We implemented three strict layers of defense.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center p-4 border border-slate-200 rounded-lg hover:border-blue-400 transition bg-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-full mr-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xl"&gt;🛑&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold text-slate-800"&gt;Human-in-the-Loop Confirmation&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600"&gt;The &lt;code&gt;BookMeeting&lt;/code&gt; function is programmatically blocked until explicit verbal confirmation is received from the user.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center p-4 border border-slate-200 rounded-lg hover:border-blue-400 transition bg-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xl"&gt;👁️&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold text-slate-800"&gt;Hallucination Checks&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600"&gt;A "verification step" cross-references the proposed slot against the availability array one final time before API commitment.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center p-4 border border-slate-200 rounded-lg hover:border-blue-400 transition bg-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full mr-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xl"&gt;🌍&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold text-slate-800"&gt;Time Zone Normalization&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-600"&gt;All inputs are converted to UTC backend-side before API interaction to prevent geography-based scheduling errors.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Roadmap &amp; Reflection --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="roadmap" class="bg-slate-900 text-white p-6 md:p-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Roadmap --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-2xl font-bold mb-6"&gt;Future Roadmap: The "PriyaX" Era&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-6 border-l-2 border-slate-700 pl-6 relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Timeline Items --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-500"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-lg"&gt;PriyaX Framework&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-slate-400 text-sm"&gt;Engineering an advanced LangChain architecture for dynamic, multi-turn flows, moving beyond transactional tasks to deep relational context.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-500"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-lg"&gt;Lifestyle &amp; Health Integration&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-slate-400 text-sm"&gt;Connecting with fitness APIs (e.g., Oura, HealthKit) to enable autonomous wellness check-ins, transforming Priya into a proactive health companion.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="relative"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-purple-500"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-lg"&gt;Event-Driven Agency&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-slate-400 text-sm"&gt;Implementing webhook triggers for real-world events, allowing the agent to initiate contact based on external data signals rather than just reacting.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Market Application (Replaces Strategic Reflection) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col justify-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-emerald-500/50 transition duration-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="h-10 w-10 bg-emerald-500/20 text-emerald-400 rounded-lg flex items-center justify-center text-xl mr-3"&gt;🏨&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-bold text-white"&gt;Market Application: Hospitality&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-300 mb-6 leading-relaxed text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>"The inspiration came from &lt;strong&gt;our family-owned motel&lt;/strong&gt; where &lt;strong&gt;elderly staff&lt;/strong&gt; struggled to maintain 24/7 phone coverage. We built and deployed Priya as an operational safety net."</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-300 mb-6 leading-relaxed text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>We tested the system specifically to handle overflow. When the staff misses a call due to slower mobility or high operational load, Priya picks up. It now serves as a reliable &lt;strong&gt;backup receptionist&lt;/strong&gt;, recovering reservations that would otherwise be lost to voicemail.</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                        </span></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center pt-4 border-t border-slate-700/50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex -space-x-2 mr-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-800 flex items-center justify-center text-xs"&gt;🛎️&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-800 flex items-center justify-center text-xs"&gt;🔑&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-800 flex items-center justify-center text-xs"&gt;📞&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xs text-slate-400"&gt;Supporting aging workforce with AI&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Live Demo / Contact Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="demo" class="bg-emerald-50 border-t border-emerald-100 p-6 md:p-16"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="max-w-4xl mx-auto text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="inline-block px-3 py-1 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold mb-4 animate-pulse"&gt;LIVE PROTOTYPE&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4"&gt;Test Priya Yourself&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Experience the latency, intent recognition, and voice realism firsthand. Call the production number below to test the agent's scheduling capabilities.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white p-8 rounded-2xl shadow-lg border border-emerald-200 inline-block mb-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-500 uppercase tracking-wide font-bold mb-2"&gt;Call the Agent&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="tel:8044754116" class="text-3xl md:text-5xl font-bold text-slate-800 hover:text-emerald-600 transition tracking-tight"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>(804) 475-4116</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-600 mb-4"&gt;Want to discuss the architecture or roadmap?&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="https://www.linkedin.com/in/pranavapatel/" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-[#0077b5] text-white font-bold rounded-lg shadow-md hover:bg-[#006396] transition transform hover:-translate-y-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"&gt;&lt;path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/&gt;&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Connect on LinkedIn</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Navigation Logic</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function scrollToSection(id) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const element = document.getElementById(id);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (element) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>element.scrollIntoView({ behavior: 'smooth' });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Strategy Grid Interaction</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function highlightStrategy(index) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Reset all</p>
-<p class="p1"><span class="Apple-converted-space">            </span>[0, 1, 2].forEach(i =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const card = document.getElementById(`strat-card-${i}`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>card.classList.remove('border-blue-500', 'bg-slate-50');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>card.classList.add('border-slate-200', 'bg-white');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Highlight selected</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const selected = document.getElementById(`strat-card-${index}`);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>selected.classList.remove('border-slate-200', 'bg-white');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>selected.classList.add('border-blue-500', 'bg-slate-50');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Architecture Diagram Interaction</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function showNodeDetails(nodeId) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Update UI State for Nodes</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const nodes = ['vapi', 'langchain', 'openai', 'tools'];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>nodes.forEach(n =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const el = document.getElementById(`node-${n}`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (n === nodeId) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.add('node-active', 'border-blue-500');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.remove('border-slate-300');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.remove('node-active', 'border-blue-500');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.add('border-slate-300');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Update Content Panel</p>
-<p class="p1"><span class="Apple-converted-space">            </span>nodes.forEach(n =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const content = document.getElementById(`detail-${n}`);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (n === nodeId) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>content.classList.remove('hidden-content');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>content.classList.add('hidden-content');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Chart Initialization</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ------------------------------------------------------------</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// 1. Latency Chart</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const ctxLatency = document.getElementById('latencyChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctxLatency, {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>type: 'bar',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>labels: ['Phatic Response', 'Reasoning Response', 'User Patience Limit'],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Time in Milliseconds',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>data: [600, 1800, 2000],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: ['#22c55e', '#3b82f6', '#ef4444'],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>borderRadius: 6</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>legend: { display: false },</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>tooltip: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>callbacks: {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>label: function(context) {</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>return context.raw + 'ms';</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>y: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>beginAtZero: true,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>title: { display: true, text: 'Latency (ms)' }</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// 2. Radar Chart (Trade-offs)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const ctxRadar = document.getElementById('radarChart').getContext('2d');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctxRadar, {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>type: 'radar',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>labels: ['Reliability', 'Creativity', 'Structure', 'Personality', 'Safety'],</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [{</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Priya (Agent)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>data: [95, 20, 90, 40, 90],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>fill: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: 'rgba(59, 130, 246, 0.2)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: 'rgb(59, 130, 246)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointBackgroundColor: 'rgb(59, 130, 246)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointBorderColor: '#fff',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointHoverBackgroundColor: '#fff',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointHoverBorderColor: 'rgb(59, 130, 246)'</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}, {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>label: 'Generic Chatbot',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>data: [60, 90, 40, 85, 50],</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>fill: true,</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: 'rgba(203, 213, 225, 0.2)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: 'rgb(203, 213, 225)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointBackgroundColor: 'rgb(203, 213, 225)',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointBorderColor: '#fff',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointHoverBackgroundColor: '#fff',</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>pointHoverBorderColor: 'rgb(203, 213, 225)'</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}]</p>
-<p class="p1"><span class="Apple-converted-space">                </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                </span>options: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>responsive: true,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>maintainAspectRatio: false,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>scales: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>r: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>angleLines: { display: false },</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>suggestedMin: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>suggestedMax: 100,</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>grid: {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>color: '#e2e8f0'</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>pointLabels: {</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>font: {</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>size: 11</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>plugins: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>legend: {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>position: 'bottom'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="flex flex-col md:flex-row min-h-screen">
+
+    <!-- Navigation Sidebar -->
+    <nav class="w-full md:w-72 bg-slate-900 text-white flex-shrink-0 md:h-screen md:sticky md:top-0 overflow-y-auto z-50">
+        <div class="p-6">
+            <h1 class="text-2xl font-bold tracking-tight mb-1">Priya</h1>
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-8">AI Voice Agent Case Study</p>
+            
+            <div class="space-y-2 mb-8">
+                <button onclick="scrollToSection('hero')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-blue-400">Overview</button>
+                <button onclick="scrollToSection('strategy')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300">Strategic Motivation</button>
+                <button onclick="scrollToSection('architecture')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300">System Architecture</button>
+                <button onclick="scrollToSection('tradeoffs')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300">Decisions & Tradeoffs</button>
+                <button onclick="scrollToSection('safety')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300">Risk & Guardrails</button>
+                <button onclick="scrollToSection('roadmap')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-slate-300">Roadmap & Market Fit</button>
+                <button onclick="scrollToSection('demo')" class="nav-btn w-full text-left px-4 py-2 rounded hover:bg-slate-800 transition text-sm font-medium text-emerald-400 border border-slate-700 mt-4">Test Live Prototype</button>
+            </div>
+
+            <div class="pt-6 border-t border-slate-700 mb-8">
+                <p class="text-xs text-slate-500 font-semibold mb-3">READ THE ARTICLES</p>
+                <a href="https://medium.com/@pranav_patel06/building-priya-a-voice-powered-ai-assistant-for-calendar-email-and-call-management-ad3500179f4b" target="_blank" class="block mb-3 text-sm text-slate-300 hover:text-white hover:underline transition">
+                    📄 Building Priya: Architecture & Tech Stack
+                </a>
+                <a href="https://medium.com/@pranav_patel06/two-weeks-with-my-own-voice-ai-agent-lessons-learned-and-whats-next-with-priyax-and-vmware-26816f8a4292" target="_blank" class="block text-sm text-slate-300 hover:text-white hover:underline transition">
+                    📄 Two Weeks In: Lessons Learned
+                </a>
+            </div>
+
+            <div class="pt-6 border-t border-slate-700">
+                <p class="text-xs text-slate-500 font-semibold mb-2">CORE STACK</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Vapi</span>
+                    <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">OpenAI</span>
+                    <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">LangChain</span>
+                    <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">GCal API</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-x-hidden">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="p-6 md:p-12 max-w-6xl mx-auto">
+            <div class="mb-6">
+                <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold mb-4">Systems Prototype</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Designing Deterministic AI Agents for Voice Interface</h2>
+                <p class="text-xl text-slate-600 leading-relaxed max-w-3xl mb-6">
+                    Priya is a production-ready voice assistant that moves beyond simple retrieval. It bridges the gap between LLM reasoning and deterministic tool execution to autonomously manage inbound calls and schedule meetings.
+                </p>
+                
+                <!-- Article Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="https://medium.com/@pranav_patel06/building-priya-a-voice-powered-ai-assistant-for-calendar-email-and-call-management-ad3500179f4b" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 shadow-sm text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition">
+                        <span>Read Part 1: Building Priya</span>
+                        <span class="ml-2">↗</span>
+                    </a>
+                    <a href="https://medium.com/@pranav_patel06/two-weeks-with-my-own-voice-ai-agent-lessons-learned-and-whats-next-with-priyax-and-vmware-26816f8a4292" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 shadow-sm text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 transition">
+                        <span>Read Part 2: Lessons Learned</span>
+                        <span class="ml-2">↗</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div class="text-3xl mb-3">🗣️</div>
+                    <h3 class="font-bold text-slate-800 mb-2">Voice-First</h3>
+                    <p class="text-sm text-slate-600">Handles high-speed, interruptible conversation logic.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="font-bold text-slate-800 mb-2">Action-Oriented</h3>
+                    <p class="text-sm text-slate-600">Executes write-operations via Google Calendar API.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <div class="text-3xl mb-3">🛡️</div>
+                    <h3 class="font-bold text-slate-800 mb-2">Deterministic</h3>
+                    <p class="text-sm text-slate-600">Structured function calling ensures reliability over creativity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Motivation -->
+        <section id="strategy" class="bg-white border-y border-slate-200 p-6 md:p-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-900">Strategic Motivation</h2>
+                    <p class="text-slate-600 mt-2">Why build this? The transition from chatbots to agents requires solving for three core product hypotheses regarding trust and usability.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Hypothesis 1 -->
+                    <div class="group cursor-pointer" onclick="highlightStrategy(0)">
+                        <div id="strat-card-0" class="border-l-4 border-blue-500 bg-slate-50 p-6 transition-all duration-300 hover:shadow-md">
+                            <h4 class="font-bold text-lg mb-2 text-slate-800">1. Voice-First UX</h4>
+                            <p class="text-sm text-slate-600">Can an LLM handle the high-speed, interruptible nature of voice conversation without breaking immersion?</p>
+                        </div>
+                    </div>
+                    <!-- Hypothesis 2 -->
+                    <div class="group cursor-pointer" onclick="highlightStrategy(1)">
+                        <div id="strat-card-1" class="border-l-4 border-slate-200 bg-white p-6 transition-all duration-300 hover:shadow-md">
+                            <h4 class="font-bold text-lg mb-2 text-slate-800">2. Tool Reliability</h4>
+                            <p class="text-sm text-slate-600">How do we ensure an LLM triggers API calls only when specific, structured criteria are met?</p>
+                        </div>
+                    </div>
+                    <!-- Hypothesis 3 -->
+                    <div class="group cursor-pointer" onclick="highlightStrategy(2)">
+                        <div id="strat-card-2" class="border-l-4 border-slate-200 bg-white p-6 transition-all duration-300 hover:shadow-md">
+                            <h4 class="font-bold text-lg mb-2 text-slate-800">3. Trust & Safety</h4>
+                            <p class="text-sm text-slate-600">What guardrails are necessary to give an AI "write access" to a user's personal calendar?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture -->
+        <section id="architecture" class="p-6 md:p-12 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">System Architecture</h2>
+                <p class="text-slate-600 mt-2">
+                    A modular design decoupling voice processing from reasoning logic.
+                    <span class="font-medium text-blue-600">Click the nodes below to explore the technical flow.</span>
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Interactive Diagram -->
+                <div class="w-full lg:w-1/2 flex flex-col items-center justify-center space-y-4 py-8 bg-slate-50 rounded-xl border border-slate-200 relative">
+                    <!-- Connector Lines (CSS) -->
+                    <div class="absolute w-1 h-full bg-slate-200 z-0" style="left: 50%; transform: translateX(-50%); top:0;"></div>
+
+                    <!-- Nodes -->
+                    <div onclick="showNodeDetails('vapi')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition node-active" id="node-vapi">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-slate-700">1. Voice Gateway</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded">Vapi</span>
+                        </div>
+                    </div>
+                    
+                    <div class="relative z-10 text-slate-400 text-2xl">⬇</div>
+
+                    <div onclick="showNodeDetails('langchain')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition" id="node-langchain">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-slate-700">2. Orchestration</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded">LangChain</span>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 text-slate-400 text-2xl">⬇</div>
+
+                    <div onclick="showNodeDetails('openai')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition" id="node-openai">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-slate-700">3. Reasoning</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded">GPT-4o</span>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 text-slate-400 text-2xl">⬇</div>
+
+                    <div onclick="showNodeDetails('tools')" class="relative z-10 w-64 bg-white p-4 rounded shadow border border-slate-300 cursor-pointer hover:border-blue-500 transition" id="node-tools">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-slate-700">4. Tool Execution</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded">GCal API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detail Panel -->
+                <div class="w-full lg:w-1/2 bg-white rounded-xl border border-slate-200 p-8 shadow-sm h-full min-h-[400px]">
+                    <div id="detail-vapi" class="fade-in">
+                        <h3 class="text-xl font-bold text-blue-600 mb-4">1. Voice Gateway (Vapi)</h3>
+                        <p class="text-slate-700 mb-4">Handles the raw telephony, Speech-to-Text (STT), and Text-to-Speech (TTS). Critical for managing the "feel" of the conversation.</p>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Manages turn-taking logic.</li>
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Detects interruptions (barge-in).</li>
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Streams audio with minimal latency.</li>
+                        </ul>
+                    </div>
+
+                    <div id="detail-langchain" class="hidden-content fade-in">
+                        <h3 class="text-xl font-bold text-blue-600 mb-4">2. Orchestration Layer</h3>
+                        <p class="text-slate-700 mb-4">Acts as the nervous system, managing conversation state and routing transcripts between the voice layer and the reasoning brain.</p>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Maintains context history.</li>
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Formats prompts for the LLM.</li>
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Parses structured outputs (JSON).</li>
+                        </ul>
+                    </div>
+
+                    <div id="detail-openai" class="hidden-content fade-in">
+                        <h3 class="text-xl font-bold text-blue-600 mb-4">3. Reasoning Engine</h3>
+                        <p class="text-slate-700 mb-4">The core logic center utilizing OpenAI's GPT-4o. It doesn't just chat; it analyzes intent to determine if an action is required.</p>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Uses <strong>Function Calling</strong> to output JSON.</li>
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Extracts entities (Date, Time, Duration).</li>
+                            <li class="flex items-start"><span class="mr-2 text-blue-500">✓</span>Decides <i>when</i> to stop talking and start doing.</li>
+                        </ul>
+                    </div>
+
+                    <div id="detail-tools" class="hidden-content fade-in">
+                        <h3 class="text-xl font-bold text-blue-600 mb-4">4. Tool Execution</h3>
+                        <p class="text-slate-700 mb-4">The hands of the system. Performs deterministic read/write operations on the Google Calendar API.</p>
+                        <div class="bg-slate-100 p-4 rounded text-sm font-mono text-slate-700 mb-4">
+                            <p class="font-bold text-xs text-slate-500 mb-2">FUNCTIONS:</p>
+                            <p>GetAvailability(start, end)</p>
+                            <p>BookMeeting(email, time, duration)</p>
+                        </div>
+                        <p class="text-sm text-slate-600"><strong>Feedback Loop:</strong> API success/failure is fed back to context so the voice agent can confirm verbally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decisions & Tradeoffs -->
+        <section id="tradeoffs" class="bg-slate-50 border-y border-slate-200 p-6 md:p-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-slate-900">Key Product Decisions</h2>
+                    <p class="text-slate-600 mt-2">Systems design is about trade-offs. Here is how we balanced competing constraints.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <!-- Decision 1: Latency -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-2">1. Latency vs. Intelligence</h3>
+                        <p class="text-sm text-slate-600 mb-6">Voice interfaces have a strict latency budget. We used a hybrid approach: fast models for phatic chat, smart models for reasoning.</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="latencyChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-slate-400 mt-4">Average user patience threshold before abandonment.</p>
+                    </div>
+
+                    <!-- Decision 2: Scoping -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-2">2. Strict Scoping vs. Open Chat</h3>
+                        <p class="text-sm text-slate-600 mb-6">To ensure reliability, we traded "Personality" for "Structure". Priya politely rejects out-of-scope topics.</p>
+                        
+                        <div class="chart-container">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-slate-400 mt-4">Product Profile: Priya vs. Generic Chatbot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk & Guardrails -->
+        <section id="safety" class="p-6 md:p-12 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">Risk Mitigation & Guardrails</h2>
+                <p class="text-slate-600 mt-2">Giving an AI write-access to a database creates integrity risks. We implemented three strict layers of defense.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center p-4 border border-slate-200 rounded-lg hover:border-blue-400 transition bg-white">
+                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-full mr-4">
+                        <span class="text-xl">🛑</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Human-in-the-Loop Confirmation</h4>
+                        <p class="text-sm text-slate-600">The <code>BookMeeting</code> function is programmatically blocked until explicit verbal confirmation is received from the user.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center p-4 border border-slate-200 rounded-lg hover:border-blue-400 transition bg-white">
+                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-4">
+                        <span class="text-xl">👁️</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Hallucination Checks</h4>
+                        <p class="text-sm text-slate-600">A "verification step" cross-references the proposed slot against the availability array one final time before API commitment.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center p-4 border border-slate-200 rounded-lg hover:border-blue-400 transition bg-white">
+                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full mr-4">
+                        <span class="text-xl">🌍</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Time Zone Normalization</h4>
+                        <p class="text-sm text-slate-600">All inputs are converted to UTC backend-side before API interaction to prevent geography-based scheduling errors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap & Market Fit -->
+        <section id="roadmap" class="bg-slate-900 text-white p-6 md:p-12">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Roadmap -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">Future Roadmap: The "PriyaX" Era</h2>
+                    <div class="space-y-6 border-l-2 border-slate-700 pl-6 relative">
+                        <!-- Timeline Items -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-500"></span>
+                            <h4 class="font-bold text-lg">PriyaX Framework</h4>
+                            <p class="text-slate-400 text-sm">Engineering an advanced LangChain architecture for dynamic, multi-turn flows, moving beyond transactional tasks to deep relational context.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-500"></span>
+                            <h4 class="font-bold text-lg">Lifestyle & Health Integration</h4>
+                            <p class="text-slate-400 text-sm">Connecting with fitness APIs (e.g., Oura, HealthKit) to enable autonomous wellness check-ins, transforming Priya into a proactive health companion.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-purple-500"></span>
+                            <h4 class="font-bold text-lg">Event-Driven Agency</h4>
+                            <p class="text-slate-400 text-sm">Implementing webhook triggers for real-world events, allowing the agent to initiate contact based on external data signals rather than just reacting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Application -->
+                <div class="flex flex-col justify-center">
+                    <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-emerald-500/50 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="h-10 w-10 bg-emerald-500/20 text-emerald-400 rounded-lg flex items-center justify-center text-xl mr-3">🏨</div>
+                            <h3 class="text-xl font-bold text-white">Market Application: Hospitality</h3>
+                        </div>
+                        <p class="text-slate-300 mb-6 leading-relaxed text-sm">
+                            "The inspiration came from <strong>our family-owned motel</strong> where <strong>elderly staff</strong> struggled to maintain 24/7 phone coverage. We built and deployed Priya as an operational safety net."
+                        </p>
+                        <p class="text-slate-300 mb-6 leading-relaxed text-sm">
+                            We tested the system specifically to handle overflow. When the staff misses a call due to slower mobility or high operational load, Priya picks up. It now serves as a reliable <strong>backup receptionist</strong>, recovering reservations that would otherwise be lost to voicemail.
+                        </p>
+                        
+                        <div class="flex items-center pt-4 border-t border-slate-700/50">
+                            <div class="flex -space-x-2 mr-4">
+                                <div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-800 flex items-center justify-center text-xs">🛎️</div>
+                                <div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-800 flex items-center justify-center text-xs">🔑</div>
+                                <div class="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-800 flex items-center justify-center text-xs">📞</div>
+                            </div>
+                            <p class="text-xs text-slate-400">Supporting aging workforce with AI</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Live Demo / Contact Section -->
+        <section id="demo" class="bg-emerald-50 border-t border-emerald-100 p-6 md:p-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-block px-3 py-1 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold mb-4 animate-pulse">LIVE PROTOTYPE</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Test Priya Yourself</h2>
+                <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+                    Experience the latency, intent recognition, and voice realism firsthand. Call the production number below to test the agent's scheduling capabilities.
+                </p>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-emerald-200 inline-block mb-10">
+                    <p class="text-sm text-slate-500 uppercase tracking-wide font-bold mb-2">Call the Agent</p>
+                    <a href="tel:8044754116" class="text-3xl md:text-5xl font-bold text-slate-800 hover:text-emerald-600 transition tracking-tight">
+                        (804) 475-4116
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <p class="text-slate-600 mb-4">Want to discuss the architecture or roadmap?</p>
+                    <a href="https://www.linkedin.com/in/pranavapatel/" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-[#0077b5] text-white font-bold rounded-lg shadow-md hover:bg-[#006396] transition transform hover:-translate-y-1">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // ------------------------------------------------------------
+        // Navigation Logic
+        // ------------------------------------------------------------
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // ------------------------------------------------------------
+        // Strategy Grid Interaction
+        // ------------------------------------------------------------
+        function highlightStrategy(index) {
+            // Reset all
+            [0, 1, 2].forEach(i => {
+                const card = document.getElementById(`strat-card-${i}`);
+                card.classList.remove('border-blue-500', 'bg-slate-50');
+                card.classList.add('border-slate-200', 'bg-white');
+            });
+
+            // Highlight selected
+            const selected = document.getElementById(`strat-card-${index}`);
+            selected.classList.remove('border-slate-200', 'bg-white');
+            selected.classList.add('border-blue-500', 'bg-slate-50');
+        }
+
+        // ------------------------------------------------------------
+        // Architecture Diagram Interaction
+        // ------------------------------------------------------------
+        function showNodeDetails(nodeId) {
+            // Update UI State for Nodes
+            const nodes = ['vapi', 'langchain', 'openai', 'tools'];
+            nodes.forEach(n => {
+                const el = document.getElementById(`node-${n}`);
+                if (n === nodeId) {
+                    el.classList.add('node-active', 'border-blue-500');
+                    el.classList.remove('border-slate-300');
+                } else {
+                    el.classList.remove('node-active', 'border-blue-500');
+                    el.classList.add('border-slate-300');
+                }
+            });
+
+            // Update Content Panel
+            nodes.forEach(n => {
+                const content = document.getElementById(`detail-${n}`);
+                if (n === nodeId) {
+                    content.classList.remove('hidden-content');
+                } else {
+                    content.classList.add('hidden-content');
+                }
+            });
+        }
+
+        // ------------------------------------------------------------
+        // Chart Initialization
+        // ------------------------------------------------------------
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Latency Chart
+            const ctxLatency = document.getElementById('latencyChart').getContext('2d');
+            new Chart(ctxLatency, {
+                type: 'bar',
+                data: {
+                    labels: ['Phatic Response', 'Reasoning Response', 'User Patience Limit'],
+                    datasets: [{
+                        label: 'Time in Milliseconds',
+                        data: [600, 1800, 2000],
+                        backgroundColor: ['#22c55e', '#3b82f6', '#ef4444'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.raw + 'ms';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Latency (ms)' }
+                        }
+                    }
+                }
+            });
+
+            // 2. Radar Chart (Trade-offs)
+            const ctxRadar = document.getElementById('radarChart').getContext('2d');
+            new Chart(ctxRadar, {
+                type: 'radar',
+                data: {
+                    labels: ['Reliability', 'Creativity', 'Structure', 'Personality', 'Safety'],
+                    datasets: [{
+                        label: 'Priya (Agent)',
+                        data: [95, 20, 90, 40, 90],
+                        fill: true,
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: 'rgb(59, 130, 246)',
+                        pointBackgroundColor: 'rgb(59, 130, 246)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(59, 130, 246)'
+                    }, {
+                        label: 'Generic Chatbot',
+                        data: [60, 90, 40, 85, 50],
+                        fill: true,
+                        backgroundColor: 'rgba(203, 213, 225, 0.2)',
+                        borderColor: 'rgb(203, 213, 225)',
+                        pointBackgroundColor: 'rgb(203, 213, 225)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(203, 213, 225)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { display: false },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            grid: {
+                                color: '#e2e8f0'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>
